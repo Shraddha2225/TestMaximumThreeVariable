@@ -41,5 +41,25 @@ public class TestMaximumNumber {
         Double maximumNumber = number.TestMaxDoubleNumber(1.1,2.2,3.3);
         Assert.assertEquals(3.3,maximumNumber,0.00);
     }
+    @Test
+    public void givenString_WhenAtFirstPosition_ReturnMaximumString() {
+        FindMaximumNumber string = new FindMaximumNumber();
+        String maximumString = string.TestCharacter("Peach","Banana","Apple");
+        Assert.assertEquals("Peach",maximumString);
+    }
+
+    @Test
+    public void givenString_WhenAtSecondPosition_ReturnMaximumString() {
+        FindMaximumNumber string = new FindMaximumNumber();
+        String maximumString = string.TestCharacter("Apple","Peach","Banana");
+        Assert.assertEquals("Peach",maximumString);
+    }
+
+    @Test
+    public void givenString_WhenAtThirdPosition_ReturnMaximumString() {
+        FindMaximumNumber string = new FindMaximumNumber();
+        String maximumString = string.TestCharacter("Apple","Banana","Peach");
+        Assert.assertEquals("Peach",maximumString);
+    }
 
 }
